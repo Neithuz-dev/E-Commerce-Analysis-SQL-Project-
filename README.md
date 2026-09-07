@@ -1,4 +1,4 @@
-# E-Commerce-Analysis-SQL-Project-
+# Amazon Sales (E-Commerce-Analysis-SQL-Project)
 
 SQL analysis of an e-commerce platform's sales, customers, products, sellers, orders, and revenue using MySQL.
 
