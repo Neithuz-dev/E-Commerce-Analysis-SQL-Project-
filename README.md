@@ -42,8 +42,10 @@ E-Commerce-Analysis-SQL-Project/
     │   ├── top_customers.png
     │   ├── top_sellers.png
     │   └── average_order_city.png
+    |    └── other screenshots
     │
     └── ER.png
+
 ```
 
 ## 🔗 ER Diagram
