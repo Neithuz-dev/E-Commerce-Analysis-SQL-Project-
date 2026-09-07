@@ -1,3 +1,5 @@
+#Intermediate
+use amazon_sales;
 #1. What is the total revenue generated so far?
 select round(sum(totalamount)) as total_revenue
 from orders;
@@ -37,6 +39,44 @@ order by average_order_value desc;
 select paymentmethod , count(*) as no_orders ,round(avg(totalamount),2) as avg_payment_values
 from orders
 group by paymentmethod;
+
+#7.Which 10 products have sold the highest number of units?
+select productname,sum(quantity) as total_units
+from orders 
+group by productname
+order by sum(quantity) desc
+limit 10;
+
+#8. Find cities that have generated more than 5,00,000 in total revenue
+select c.city ,sum(totalamount) as total_revenue
+from orders o
+inner join customers_data c
+on c.customerid =o.customerid
+group by c.city
+having total_revenue >500000;
+
+#9. Find all customers and their orders, including customers who have never placed an order.
+select c.*,o.*
+from customers_data c
+left join orders o
+on c.customerid =o.customerid;
+
+#10.Find customers who have never placed an order.
+select c.customername ,o.orderid
+from customers_data c
+left join orders o
+on c.customerid =o.customerid
+where o.orderid is null;
+
+#11. Find customers who have placed at least one order and show their total revenue.
+select c.customername,sum(o.totalamount) as total_revenue
+from customers_data c
+left join orders o 
+on c.customerid =o.customerid
+group by c.customerid,c.customername
+having total_revenue >0
+order by total_revenue desc;
+
 
 
 

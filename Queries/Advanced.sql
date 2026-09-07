@@ -1,3 +1,5 @@
+#Advanced
+use amazon_sales;
 #1 Rank products by total revenue within each category using RANK() or DENSE_RANK().
 select productname,category,sum(totalamount) as total_revenue , 
 dense_rank() over (partition by productname order by sum(totalamount) desc) AS rank_products
@@ -50,3 +52,30 @@ end//
 delimiter ;
 
 call get_customer_history('CUST030059');
+
+#7.Create a stored procedure get_customer_orders(customer_id) that returns the number of orders and total spending for a given customer.
+delimiter //
+
+create procedure get_customer_orders(in p_customerid varchar(20))
+begin
+select customerid,count(*) as orders_count ,sum(totalamount) as total_spent
+from orders
+where customerid =  p_customerid
+group by customerid;
+end//
+
+delimiter ;
+call get_customer_orders('CUST048677');
+
+
+#8.Find the second-highest spending customer.
+select customerid,customername ,total_spent
+from(
+select c.customerid,c.customername,sum(o.totalamount) as total_spent
+from customers_data c
+join orders o
+on c.customerid =o.customerid
+group by c.customerid, c.customername) as customer_spend
+order by total_spent desc
+limit 1 offset 1;
+
