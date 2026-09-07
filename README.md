@@ -11,7 +11,12 @@ SQL analysis of an e-commerce platform's sales, customers, products, sellers, or
 
 ## 📊 Dataset Source
 
-The dataset used in this project is the **Amazon Sales Dataset** from Kaggle.
+The original Amazon.csv dataset was imported into MySQL and then cleaned and transformed into two custom relational tables:
+
+customers_data — contains customer-related information such as customer ID, customer name, city, state, and country.
+orders — contains order-related information such as order ID, order date, customer ID, product details, quantity, price, payment method, order status, seller ID, and total amount.
+
+This table structure was created to separate customer information from order transaction data and establish a relationship between the tables using customerid.
 
 **Dataset:** [Amazon Sales Dataset](https://www.kaggle.com/datasets/rohiteng/amazon-sales-dataset)
 
