@@ -35,7 +35,7 @@ E-Commerce-Analysis-SQL-Project/
 │   ├── Intermediate.sql
 │   └── Advanced.sql
 │
-└── screenshots/
+└── Screenshots/
     ├── result_screenshots/
     │   ├── total_revenue.png
     │   ├── top_category.png
@@ -52,7 +52,7 @@ E-Commerce-Analysis-SQL-Project/
 
 The database was organized into related tables using primary keys and foreign keys.
 
-![ER Diagram](screenshots/ER.png)
+![ER Diagram](Screenshots/ER.png)
 
 ## 🔍 Key Business Questions
 
