@@ -67,7 +67,7 @@ from orders;
 
 **Result:**
 
-![Total Revenue](screenshots/result_screenshots/total_revenue.png)
+![Total Revenue](Screenshots/result_screenshots/total_revenue.png)
 
 ---
 
@@ -85,7 +85,7 @@ limit 1;
 
 **Result:**
 
-![Top Category](screenshots/result_screenshots/top_category.png)
+![Top Category](Screenshots/result_screenshots/top_category.png)
 
 ---
 
@@ -105,7 +105,7 @@ limit 5;
 
 **Result:**
 
-![Top Customers](screenshots/result_screenshots/top_customers.png)
+![Top Customers](Screenshots/result_screenshots/top_customers.png)
 
 ---
 
@@ -123,7 +123,7 @@ order by total_revenue desc;
 
 **Result:**
 
-![Top Sellers](screenshots/result_screenshots/top_sellers.png)
+![Top Sellers](Screenshots/result_screenshots/top_sellers.png)
 
 ---
 
@@ -142,7 +142,7 @@ order by average_order_value desc;
 
 **Result:**
 
-![Average Order Value by City](screenshots/result_screenshots/average_order_city.png)
+![Average Order Value by City](Screenshots/result_screenshots/average_order_city.png)
 
 ## 📚 What I Learned
 
@@ -157,7 +157,7 @@ I also gained practical experience designing tables using primary keys and forei
 * `order by`
 * `group by`
 * `having`
-* `inner join`
+* `joins`
 * `sum()`
 * `avg()`
 * `count()`
@@ -168,5 +168,4 @@ I also gained practical experience designing tables using primary keys and forei
 * Date filtering
 * Primary keys
 * Foreign keys
-* Data normalization
 * ER diagrams
